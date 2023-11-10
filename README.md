@@ -1,70 +1,20 @@
-# Getting Started with Create React App
+Car Purchase Web App:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+My Plan:
+Car buying app: Users can search a specific car name or filter by car category, color, or drive type. Filtering will show below all the cars available and show them “for sale”. If no filter is applied, all cars will be shown. If they click on the link to a car it will take them to a purchase car page, which will show the specific car they clicked on, along with a form to put in payment info. If the payment info is in the right format, then the car status will change from “for sale” to sold, then the will be programmatically navigated to a thank you page
 
-## Available Scripts
+Component Hierarchy:
 
-In the project directory, you can run:
+ReadMe -> Explains code
+NavBar -> Navigation
+NavBarCSS -> Navigation Styling
 
-### `npm start`
+App.js -> Core Component holding state
+Home.js -> Home page with page title, instructions for buying a car, and the filter to show the cars below.
+CarAffordability.js -> Page to let users input their monthly income and show them what price range they should shop in.
+PurchasePage.js -> Page for when a user clicks on a car from the Home page, to let them purchase a car. (uses car id when clicked on)
+ThankYouPage.js -> After car purchase, thank them for their business and tell them basic car care. (Not included in NavBar)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Db.json -> contains all cars data (update seeds.json with new cars, then run “npm run seed” to update db.json file).
+Index.js -> Backend data
+Routes.js -> provide routing functionality for all components
