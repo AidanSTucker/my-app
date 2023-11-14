@@ -4,6 +4,7 @@ import Purchase from "./components/Purchase";
 import ThankYou from "./components/ThankYou";
 import ContactUs from "./components/ContactUs";
 import ErrorPage from "./components/ErrorPage"; 
+import SellYourCar from "./components/SellYourCar";
 
 
 const routes = [
@@ -26,6 +27,10 @@ const routes = [
   {
     path: "/contactus",
     element: <ContactUs />,
+  },
+  {
+    path: "/sellyourcar",
+    element: <SellYourCar />,
   },
   {
     path: "*",
