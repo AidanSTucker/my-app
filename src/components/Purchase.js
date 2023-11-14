@@ -1,14 +1,26 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import NavBar from "./NavBar";
 
-function PurchasePage() {
+function Purchase() {
   const navigate = useNavigate();
+  const { carId } = useParams();
+  const [carDetails, setCarDetails] = useState(null);
   const [formData, setFormData] = useState({
     name: "",
     cardNumber: "",
     zipCode: "",
   });
+
+  useEffect(() => {
+    fetch(`http://localhost:3000/cars/${carId}`)
+      .then((response) => response.json())
+      .then((data) => setCarDetails(data));
+  }, [carId]);
+
+  if (!carDetails) {
+    return <p>Loading...</p>
+  }
 
   const handleChange = (e) => {
     setFormData({
@@ -22,7 +34,7 @@ function PurchasePage() {
     // Check if all fields are filled
     if (formData.name && formData.cardNumber && formData.zipCode) {
       // Assuming your ThankYouPg component is ready
-      navigate("/thankyoupg");
+      navigate("/thankyou");
     } else {
       // Handle incomplete form
       alert("Please fill out all fields");
@@ -61,8 +73,15 @@ function PurchasePage() {
         <br />
         <button type="submit">Submit Payment</button>
       </form>
+      <p>Your Future Car:</p>
+      <h1>{carDetails.make} {carDetails.name}</h1>
+      <img
+            src={carDetails.img} 
+            alt={`${carDetails.make} ${carDetails.name}`} 
+            style={{ width: '300px', height: '200px' }} 
+          />
     </main>
   );
 }
 
-export default PurchasePage;
+export default Purchase;

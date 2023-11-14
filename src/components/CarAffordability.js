@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import NavBar from "./NavBar";
-import ThankYouPg from "./ThankYouPg";
+
 
 function PurchasePage() {
   const [income, setIncome] = useState("");

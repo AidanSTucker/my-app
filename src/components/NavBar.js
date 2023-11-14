@@ -16,18 +16,13 @@ function NavBar() {
         >
           Car Affordability Calculator
         </NavLink>
-        {/* <NavLink
-          to="/purchasepage"
+        <NavLink
+          to="/contactus"
           className="nav-link"
         >
-          Purchase Page
-        </NavLink> */}
-        {/* <NavLink
-          to="/thankyoupg"
-          className="nav-link"
-        >
-          Thank You
-        </NavLink> */}
+          Contact Us!
+        </NavLink>
+
       </nav>
     );
   };

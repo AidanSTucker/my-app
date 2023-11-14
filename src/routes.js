@@ -1,7 +1,10 @@
 import Home from "./components/Home";
 import CarAffordability from "./components/CarAffordability";
-import PurchasePage from "./components/PurchasePage";
-import ThankYouPg from "./components/ThankYouPg";
+import Purchase from "./components/Purchase";
+import ThankYou from "./components/ThankYou";
+import ContactUs from "./components/ContactUs";
+import ErrorPage from "./components/ErrorPage"; 
+
 
 const routes = [
   {
@@ -13,12 +16,20 @@ const routes = [
     element: <CarAffordability />,
   },
   {
-    path: "/purchasepage",
-    element: <PurchasePage />,
+    path: "/purchase/:carId",
+    element: <Purchase />,
   },
   {
-    path: "/thankyoupg",
-    element: <ThankYouPg />,
+    path: "/thankyou",
+    element: <ThankYou />,
+  },
+  {
+    path: "/contactus",
+    element: <ContactUs />,
+  },
+  {
+    path: "*",
+    element: <ErrorPage />,
   },
   
 ];

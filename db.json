@@ -1,19 +1,94 @@
 {
-  "posts": [
+  "cars": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "name": "Camry",
+      "make": "Toyota",
+      "year": "2024",
+      "type": "Sedan",
+      "color": "Blue",
+      "price": 10000,
+      "img": "https://file.kelleybluebookimages.com/kbb/base/evox/CP/13080/2019-Toyota-Camry-front_13080_032_1833x720_2QQ_cropped.png"
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "id": 2,
+      "name": "Civic",
+      "make": "Honda",
+      "year": "2023",
+      "body": "Sedan",
+      "color": "Red",
+      "price": 30000,
+      "img": "https://vehicle-images.dealerinspire.com/6b45-11002374/2HGFE2F57RH520345/1e96da8c90554f8e9dc6db84b07108b6.png"
+    },
+    {
+      "id": 3,
+      "name": "F150",
+      "make": "Ford",
+      "year": "2019",
+      "body": "Truck",
+      "color": "Black",
+      "price": 35000,
+      "img": "https://file.kelleybluebookimages.com/kbb/base/evox/CP/14956/2021-Ford-F150%20Regular%20Cab-front_14956_032_2400x1800_UM.png"
+    },
+    {
+      "id": 4,
+      "name": "Tahoe",
+      "make": "Chevy",
+      "year": "2018",
+      "type": "SUV",
+      "color": "White",
+      "price": 46997,
+      "img": "https://media.chromedata.com/MediaGallery/media/MzE2NzQwXk1lZGlhIEdhbGxlcnk/6VRUrjOL6Lu2kLyn_o6pfYfE8isGIncyWL_oIdjaPgNiLL0H-6tJbgg8sf2MvUmaZVjbh564cu2E_982E5a1snvJwl29SfwRQ3prfq-u_jgx2MqYSk5bxZIcj1Eu7p8ZnaPmtzE17LAvuuCnYnEu6A/2018CHS110051_1280_01.png"
+    },
+    {
+      "id": 5,
+      "name": "Soul",
+      "make": "Kia",
+      "year": "2023",
+      "body": "Compact",
+      "color": "Green",
+      "price": 26995,
+      "img": "https://file.kelleybluebookimages.com/kbb/base/evox/CP/52457/2023-Kia-Soul-front_52457_032_1911x926_GEA_cropped.png"
+    },
+    {
+      "id": 6,
+      "name": "330i",
+      "make": "BMW",
+      "year": "2019",
+      "body": "Sport Sedan",
+      "color": "Black",
+      "price": 50440,
+      "img": "https://www.fermanbmw.com/assets/stock/ColorMatched_01/Transparent/640/cc_2019BMC22_01_640/cc_2019BMC220039_01_640_668.png"
+    },
+    {
+      "id": 7,
+      "name": "S5 Sportback",
+      "make": "Audi",
+      "year": "2020",
+      "type": "Hatchback",
+      "color": "Black",
+      "price": 44000,
+      "img": "https://vehicle-images.dealerinspire.com/stock-images/chrome/ec5193f50b5a114a950a298f9a0fdb42.png"
+    },
+    {
+      "id": 8,
+      "name": "AMG C43",
+      "make": "Mercedes",
+      "year": "2023",
+      "body": "Hatchback",
+      "color": "Grey",
+      "price": 57900,
+      "img": "https://vehicle-images.dealerinspire.com/stock-images/thumbnails/large/chrome/a3ecdc4fdc6ebdd7f284192e04bf7700.png"
+    },
+    {
+      "id": 9,
+      "name": "Ghost",
+      "make": "Rolls Royce",
+      "year": "2019",
+      "body": "Sport Sedan",
+      "color": "Grey",
+      "price": 229950,
+      "img": "https://static.tcimg.net/vehicles/primary/6e3df11eff794900/2019-Rolls-Royce-Ghost-silver-full_color-driver_side_front_quarter.png"
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
