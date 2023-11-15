@@ -27,6 +27,7 @@ function SellYourCar() {
             if (response.ok) {
                 // Do something when the car is successfully added
                 console.log('Car added successfully!');
+                alert("Your car is sold, thank you for your business!")
             } else {
                 // Handle errors
                 console.error('Failed to add car');
@@ -81,7 +82,7 @@ function SellYourCar() {
             name="How Much Ya Want For It"
             />
             <br />
-            <label>Photo Of Car: </label>
+            <label>Photo Of Car (URL): </label>
             <input
             type="text"
             name="Photo Of Car"
