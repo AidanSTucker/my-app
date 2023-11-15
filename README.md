@@ -47,3 +47,23 @@ All cars are a part of an array of object within my db.json file, a single car l
 
 This array of cars is fetched from my json-server with a request to "https:www.localhost3001/cars". Cars will either have a status of "for sale" or "sold", and only cars for sale will be shown on the home page. Also, if a user sells a car, that POST request will automatically apply it's status as for sale, so once sold, it's added right to the home page.
 
+I utilized programmatic navigation with the useNavigate & navigate hook from the React library. When user clicks on a cars purchase button, which is associated to it's id, the user is navigated to the purchase page (which is a hidden page they can only get to buy purchasing a car). Once payment is submitted, they are once again navigated to another page, the thank you page. This navigation looks like this:
+
+```
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Check if all fields are filled
+    if (formData.name && formData.cardNumber && formData.zipCode) {
+      // Assuming your ThankYouPg component is ready
+      navigate("/thankyou");
+    } else {
+      // Handle incomplete form
+      alert("Please fill out all fields");
+    }
+```
+ In the code above, we first check that all of the formData valuse have been filled out properly, then if so navigate them to the thank you page, otherwise send an alert on the screen to tell them they need to continue to fill out the form first. This helps me not have to worry about what to do on screen after they submit a form, since it will just bring them to another page. 
+
+ ## Total Time To Completion:
+ On average I aimed to spend at least 2 hours a day on this project, and I got probably 85% of the code done in the first day, but most of my time was spent on figuring out very specific functionality. Such as how to change a cars status from for sale to sold, or posting a new car to the db.json server. All in all, this took me one week to complete. I utilized the flatiron resources, chatGPT, MDN, & LeetCode to guide me through this project!
+
+ # ----> Thank You For Reading! <----
