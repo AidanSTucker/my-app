@@ -89,6 +89,16 @@
       "color": "Grey",
       "price": 229950,
       "img": "https://static.tcimg.net/vehicles/primary/6e3df11eff794900/2019-Rolls-Royce-Ghost-silver-full_color-driver_side_front_quarter.png"
+    },
+    {
+      "name": "Jetta",
+      "make": "Volkswagen",
+      "year": "2016",
+      "type": "Sedan",
+      "color": "White",
+      "price": "15000",
+      "img": "www.img.com",
+      "id": 10
     }
   ]
 }

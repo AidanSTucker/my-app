@@ -51,13 +51,10 @@ I utilized programmatic navigation with the useNavigate & navigate hook from the
 
 ```
   const handleSubmit = (e) => {
-    e.preventDefault();
-    // Check if all fields are filled
+    e.preventDefault();   
     if (formData.name && formData.cardNumber && formData.zipCode) {
-      // Assuming your ThankYouPg component is ready
       navigate("/thankyou");
     } else {
-      // Handle incomplete form
       alert("Please fill out all fields");
     }
 ```
