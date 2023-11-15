@@ -28,3 +28,22 @@ Db.json -> contains all cars data (update seeds.json with new cars, then run “
 Index.js -> Backend data
 Routes.js -> provide routing functionality for all components
 ErrorPage.js -> conditional component to render an error page on incorrect url paths.
+
+## Specific Functionalities:
+All cars are a part of an array of object within my db.json file, a single car looks like this:
+
+```  "cars": [
+    {
+      "id": 1,
+      "name": "Camry",
+      "make": "Toyota",
+      "year": "2024",
+      "type": "Sedan",
+      "color": "Blue",
+      "price": 10000,
+      "img": "https://file.kelleybluebookimages.com/kbb/base/evox/CP/13080/2019-Toyota-Camry-front_13080_032_1833x720_2QQ_cropped.png"
+    },
+```
+
+This array of cars is fetched from my json-server with a request to "https:www.localhost3001/cars". Cars will either have a status of "for sale" or "sold", and only cars for sale will be shown on the home page. Also, if a user sells a car, that POST request will automatically apply it's status as for sale, so once sold, it's added right to the home page.
+
