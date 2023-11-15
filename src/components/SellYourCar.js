@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import NavBar from "./NavBar";
 
 function SellYourCar() {
+    
     const handleSubmit = async (event) => {
         event.preventDefault();
         // Fetch form data
