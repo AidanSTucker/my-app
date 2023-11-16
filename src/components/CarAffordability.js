@@ -32,6 +32,7 @@ function PurchasePage() {
       <h1>
         <NavBar />
         Car Affordability Calculator
+        <p>Input your yearly salary and see what price range you should shop in.</p>
       </h1>
       <form onSubmit={handleSubmit}>
         <label>
