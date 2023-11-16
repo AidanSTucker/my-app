@@ -45,7 +45,7 @@ All cars are a part of an array of object within my db.json file, a single car l
     },
 ```
 
-This array of cars is fetched from my json-server with a request to "https:www.localhost3001/cars". Cars will either have a status of "for sale" or "sold", and only cars for sale will be shown on the home page. Also, if a user sells a car, that POST request will automatically apply it's status as for sale, so once sold, it's added right to the home page.
+This array of cars is fetched from my json-server with a request to "https:www.localhost3000/cars". Cars will either have a status of "for sale" or "sold", and only cars for sale will be shown on the home page. Also, if a user sells a car, that POST request will automatically apply it's status as for sale, so once sold, it's added right to the home page.
 
 I utilized programmatic navigation with the useNavigate & navigate hook from the React library. When user clicks on a cars purchase button, which is associated to it's id, the user is navigated to the purchase page (which is a hidden page they can only get to buy purchasing a car). Once payment is submitted, they are once again navigated to another page, the thank you page. This navigation looks like this:
 

@@ -47,6 +47,7 @@ const Home = () => {
           <p>Price: ${car.price}</p>
           <p>Color: {car.color}</p>
           <p>Year: {car.year}</p>
+          <p>Body Style: {car.body}</p>
           <img
             src={car.img} 
             alt={`${car.make} ${car.name}`} 
