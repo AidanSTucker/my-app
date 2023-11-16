@@ -1,4 +1,4 @@
-.nav-link{
+.nav-link {
     display: inline-block;
     box-sizing: border-box;
     width: 220px;
@@ -7,10 +7,21 @@
     background: rgb(50, 109, 115);
     text-decoration: none;
     text-align: center;
-    font-size: min(10vw, 15px) ;
+    font-size: min(10vw, 15px);
     color: white;
-}
+  }
   
-.active {
+  .active {
     color: rgb(15, 1, 1);
-}
+  }
+  
+  
+  .nav-link:hover {
+    background-color: #555;
+    
+  }
+  
+  .navbar {
+    border: 2px solid #ccc; 
+    padding: 10px; 
+  }

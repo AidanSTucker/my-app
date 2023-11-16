@@ -27,3 +27,10 @@ button {
   background-color: #e74c3c; 
   color: #ffffff;
 }
+
+h1 {
+  text-align: center; 
+  background-color: #f2f2f2; 
+  padding: 20px; 
+  
+}
