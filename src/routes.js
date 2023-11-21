@@ -6,6 +6,7 @@ import ContactUs from "./components/ContactUs";
 import ErrorPage from "./components/ErrorPage"; 
 import SellYourCar from "./components/SellYourCar";
 
+//make sell your car a child of the compoennt component to use outletcontex to pass down state
 
 const routes = [
   {
