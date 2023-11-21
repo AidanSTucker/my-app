@@ -4,7 +4,7 @@ import NavBar from "./NavBar";
 
 const Home = () => {
   const [cars, setCars] = useState([]);
-  const [selectedCategory, setSelectedCategory] = useState(""); // State for selected category
+  const [selectedCategory, setSelectedCategory] = useState(""); 
 
   useEffect(() => {
     fetch('http://localhost:3000/cars')

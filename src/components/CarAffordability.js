@@ -18,7 +18,7 @@ function PurchasePage() {
       return;
     }
 
-    // Calculate the price range
+    
     const incomeNum = parseFloat(income);
     const basePrice = 0.35 * incomeNum;
     const minPrice = basePrice - 5000;

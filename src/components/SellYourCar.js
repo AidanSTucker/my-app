@@ -5,7 +5,7 @@ function SellYourCar() {
     
     const handleSubmit = async (event) => {
         event.preventDefault();
-        // Fetch form data
+        
         const formData = new FormData(event.target);
         const carData = {
             name: formData.get("Model"),
@@ -16,7 +16,7 @@ function SellYourCar() {
             price: formData.get("How Much Ya Want For It"),
             img: formData.get("Photo Of Car"),
         };
-        // Send POST request with carData to your backend API
+        
         try {
             const response = await fetch('http://localhost:3000/cars', {
                 method: 'POST',
@@ -26,11 +26,11 @@ function SellYourCar() {
                 body: JSON.stringify(carData),
             });
             if (response.ok) {
-                // Do something when the car is successfully added
+                
                 console.log('Car added successfully!');
                 alert("Your car is sold, thank you for your business!")
             } else {
-                // Handle errors
+                
                 console.error('Failed to add car');
             }
         } catch (error) {

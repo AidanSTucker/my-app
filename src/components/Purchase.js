@@ -31,29 +31,29 @@ function Purchase() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // Check if all fields are filled
+    
     if (formData.name && formData.cardNumber && formData.zipCode) {
       try {
-        // Make a DELETE request to remove the purchased car
+        
         const response = await fetch(`http://localhost:3000/cars/${carId}`, {
           method: 'DELETE',
         });
 
         if (response.ok) {
-          // Assuming your ThankYouPg component is ready
+          
           navigate("/thankyou");
         } else {
           console.error('Failed to delete the car');
-          // Handle failed deletion
+          
           alert("Failed to complete the purchase. Please try again later.");
         }
       } catch (error) {
         console.error('Error:', error);
-        // Handle errors
+        
         alert("Failed to complete the purchase. Please try again later.");
       }
     } else {
-      // Handle incomplete form
+      
       alert("Please fill out all fields");
     }
   };
