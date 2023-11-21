@@ -16,6 +16,8 @@ function SellYourCar() {
             price: formData.get("How Much Ya Want For It"),
             img: formData.get("Photo Of Car"),
         };
+
+        // make this controlled by state! make child of home component
         
         try {
             const response = await fetch('http://localhost:3000/cars', {

@@ -38,6 +38,8 @@ const Home = () => {
         <option value="SUV">SUV</option>
       </select>
 
+  
+
       {filteredCars.map((car) => (
         <article key={car.id}>
           <h1>{car.make} {car.name}</h1>
@@ -59,5 +61,6 @@ const Home = () => {
     </div>
   );
 }
+// remove lines 43-52 into their own separate carsCard component to clear up home component.
 
 export default Home;

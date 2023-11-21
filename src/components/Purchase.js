@@ -34,7 +34,7 @@ function Purchase() {
     
     if (formData.name && formData.cardNumber && formData.zipCode) {
       try {
-        
+        // result in state update
         const response = await fetch(`http://localhost:3000/cars/${carId}`, {
           method: 'DELETE',
         });

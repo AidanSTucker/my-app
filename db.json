@@ -1,16 +1,6 @@
 {
   "cars": [
     {
-      "id": 1,
-      "name": "Camry",
-      "make": "Toyota",
-      "year": "2024",
-      "type": "Sedan",
-      "color": "Blue",
-      "price": 10000,
-      "img": "https://file.kelleybluebookimages.com/kbb/base/evox/CP/13080/2019-Toyota-Camry-front_13080_032_1833x720_2QQ_cropped.png"
-    },
-    {
       "id": 2,
       "name": "Civic",
       "make": "Honda",
@@ -89,7 +79,16 @@
       "color": "Grey",
       "price": 229950,
       "img": "https://static.tcimg.net/vehicles/primary/6e3df11eff794900/2019-Rolls-Royce-Ghost-silver-full_color-driver_side_front_quarter.png"
+    },
+    {
+      "name": "Jetta",
+      "make": "Volkswagen",
+      "year": "2020",
+      "type": "Sedan",
+      "color": "Black",
+      "price": "42000",
+      "img": "https://inv.assets.ansira.net/ChromeColorMatch/us/TRANSPARENT_cc_2023VWC030046_01_1280_2T2T.png",
+      "id": 10
     }
-
   ]
 }
