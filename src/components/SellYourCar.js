@@ -1,24 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import NavBar from "./NavBar";
 
 function SellYourCar() {
-    
+    const [carData, setCarData] = useState({
+        Name: "",
+        Make: "",
+        Year: "",
+        Body: "",
+        Color: "",
+        Price: "",
+        Img: "",
+    });
+
+    const handleChange = (event) => {
+        const { name, value } = event.target;
+        setCarData((prevData) => ({
+            ...prevData,
+            [name]: value,
+        }));
+    };
+
     const handleSubmit = async (event) => {
         event.preventDefault();
-        
-        const formData = new FormData(event.target);
-        const carData = {
-            name: formData.get("Model"),
-            make: formData.get("Make"),
-            year: formData.get("Year"),
-            type: formData.get("Body"),
-            color: formData.get("Color"),
-            price: formData.get("How Much Ya Want For It"),
-            img: formData.get("Photo Of Car"),
-        };
 
-        // make this controlled by state! make child of home component
-        
         try {
             const response = await fetch('http://localhost:3000/cars', {
                 method: 'POST',
@@ -28,17 +32,17 @@ function SellYourCar() {
                 body: JSON.stringify(carData),
             });
             if (response.ok) {
-                
                 console.log('Car added successfully!');
-                alert("Your car is sold, thank you for your business!")
+                alert("Your car is sold, thank you for your business!");
             } else {
-                
                 console.error('Failed to add car');
             }
         } catch (error) {
             console.error('Error:', error);
         }
     };
+
+    
     return (
         <main>
         <h1>
@@ -52,43 +56,57 @@ function SellYourCar() {
             <label>Car Model:</label>
             <input
             type="text"
-            name="Model"
+            name="Name"
+            value={carData.name}
+            onChange={handleChange}
             />
             <br />
             <label>Car Make:</label>
             <input
             type="text"
             name="Make"
+            value={carData.make}
+            onChange={handleChange}
             />
             <br />
             <label>Car Year: </label>
             <input
             type="text"
             name="Year"
+            value={carData.year}
+            onChange={handleChange}
             />
             <br />
             <label>Body Style: </label>
             <input
             type="text"
             name="Body"
+            value={carData.body}
+            onChange={handleChange}
             />
             <br />
             <label>Car Color: </label>
             <input
             type="text"
             name="Color"
+            value={carData.color}
+            onChange={handleChange}
             />
             <br />
             <label>Selling Price: </label>
             <input
             type="text"
-            name="How Much Ya Want For It"
+            name="Price"
+            value={carData.price}
+            onChange={handleChange}
             />
             <br />
             <label>Photo Of Car (URL): </label>
             <input
             type="text"
-            name="Photo Of Car"
+            name="Img"
+            value={carData.img}
+            onChange={handleChange}
             />
             <br />
             <button type="submit">Sell</button>

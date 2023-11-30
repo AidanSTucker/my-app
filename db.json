@@ -55,7 +55,7 @@
       "name": "S5 Sportback",
       "make": "Audi",
       "year": "2020",
-      "type": "Hatchback",
+      "body": "Hatchback",
       "color": "Black",
       "price": 44000,
       "img": "https://vehicle-images.dealerinspire.com/stock-images/chrome/ec5193f50b5a114a950a298f9a0fdb42.png"
@@ -84,7 +84,7 @@
       "name": "Jetta",
       "make": "Volkswagen",
       "year": "2020",
-      "type": "Sedan",
+      "body": "Sedan",
       "color": "Black",
       "price": "42000",
       "img": "https://inv.assets.ansira.net/ChromeColorMatch/us/TRANSPARENT_cc_2023VWC030046_01_1280_2T2T.png",
