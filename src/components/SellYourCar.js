@@ -3,13 +3,13 @@ import NavBar from "./NavBar";
 
 function SellYourCar() {
     const [carData, setCarData] = useState({
-        Name: "",
-        Make: "",
-        Year: "",
-        Body: "",
-        Color: "",
-        Price: "",
-        Img: "",
+        name: "",
+        make: "",
+        year: "",
+        body: "",
+        color: "",
+        price: "",
+        img: "",
     });
 
     const handleChange = (event) => {
@@ -56,7 +56,7 @@ function SellYourCar() {
             <label>Car Model:</label>
             <input
             type="text"
-            name="Name"
+            name="name"
             value={carData.name}
             onChange={handleChange}
             />
@@ -64,7 +64,7 @@ function SellYourCar() {
             <label>Car Make:</label>
             <input
             type="text"
-            name="Make"
+            name="make"
             value={carData.make}
             onChange={handleChange}
             />
@@ -72,7 +72,7 @@ function SellYourCar() {
             <label>Car Year: </label>
             <input
             type="text"
-            name="Year"
+            name="year"
             value={carData.year}
             onChange={handleChange}
             />
@@ -80,7 +80,7 @@ function SellYourCar() {
             <label>Body Style: </label>
             <input
             type="text"
-            name="Body"
+            name="body"
             value={carData.body}
             onChange={handleChange}
             />
@@ -88,7 +88,7 @@ function SellYourCar() {
             <label>Car Color: </label>
             <input
             type="text"
-            name="Color"
+            name="color"
             value={carData.color}
             onChange={handleChange}
             />
@@ -96,7 +96,7 @@ function SellYourCar() {
             <label>Selling Price: </label>
             <input
             type="text"
-            name="Price"
+            name="price"
             value={carData.price}
             onChange={handleChange}
             />
@@ -104,7 +104,7 @@ function SellYourCar() {
             <label>Photo Of Car (URL): </label>
             <input
             type="text"
-            name="Img"
+            name="img"
             value={carData.img}
             onChange={handleChange}
             />
