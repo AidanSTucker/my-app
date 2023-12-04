@@ -32,7 +32,15 @@ function SellYourCar() {
                 body: JSON.stringify(carData),
             });
             if (response.ok) {
-                console.log('Car added successfully!');
+                setCarData({
+                    name: "",
+                    make: "",
+                    year: "",
+                    body: "",
+                    color: "",
+                    price: "",
+                    img: "",
+                });
                 alert("Your car is sold, thank you for your business!");
             } else {
                 console.error('Failed to add car');

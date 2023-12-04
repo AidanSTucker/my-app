@@ -43,7 +43,6 @@ function Purchase() {
           
           navigate("/thankyou");
         } else {
-          console.error('Failed to delete the car');
           
           alert("Failed to complete the purchase. Please try again later.");
         }
