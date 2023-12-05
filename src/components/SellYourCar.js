@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import NavBar from "./NavBar";
 
-function SellYourCar() {
+function SellYourCar({ addNewCar}) {
     const [carData, setCarData] = useState({
         name: "",
         make: "",
@@ -22,33 +22,35 @@ function SellYourCar() {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-
+    
         try {
-            const response = await fetch('http://localhost:3000/cars', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(carData),
+          const response = await fetch('http://localhost:3000/cars', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(carData),
+          });
+          if (response.ok) {
+            const newCar = await response.json(); 
+            addNewCar(newCar); 
+            setCarData({
+                name: "",
+                make: "",
+                year: "",
+                body: "",
+                color: "",
+                price: "",
+                img: "",
             });
-            if (response.ok) {
-                setCarData({
-                    name: "",
-                    make: "",
-                    year: "",
-                    body: "",
-                    color: "",
-                    price: "",
-                    img: "",
-                });
-                alert("Your car is sold, thank you for your business!");
-            } else {
-                console.error('Failed to add car');
-            }
+            alert('Your car is sold, thank you for your business!');
+          } else {
+            console.error('Failed to add car');
+          }
         } catch (error) {
-            console.error('Error:', error);
+          console.error('Error:', error);
         }
-    };
+      };
 
     
     return (

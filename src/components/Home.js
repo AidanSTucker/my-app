@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import NavBar from './NavBar';
 import CarsCard from './CarsCard';
+import SellYourCar from './SellYourCar';
 
 const Home = () => {
   const [cars, setCars] = useState([]);
@@ -19,6 +20,10 @@ const Home = () => {
   const filteredCars = selectedCategory
     ? cars.filter((car) => car.body === selectedCategory)
     : cars;
+
+    const addNewCar = (newCar) => {
+      setCars([...cars, newCar]);
+    };
 
   return (
     <div>
@@ -41,6 +46,7 @@ const Home = () => {
       {filteredCars.map((car) => (
         <CarsCard key={car.id} car={car} />
       ))}
+       <SellYourCar addNewCar={addNewCar} />
     </div>
   );
 };
