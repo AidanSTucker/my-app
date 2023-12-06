@@ -17,12 +17,6 @@ function NavBar() {
           Car Affordability Calculator
         </NavLink>
         <NavLink
-          to="/sellyourcar"
-          className="nav-link"
-        >
-          Sell Us Your Car
-        </NavLink>
-        <NavLink
           to="/contactus"
           className="nav-link"
         >

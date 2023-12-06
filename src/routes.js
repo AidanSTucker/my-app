@@ -11,6 +11,12 @@ const routes = [
   {
     path: "/",
     element: <Home />,
+    children: [
+      {
+        path: "/sellyourcar",
+        element: <SellYourCar />
+      }
+    ]
   },
   {
     path: "/caraffordability",
@@ -27,10 +33,6 @@ const routes = [
   {
     path: "/contactus",
     element: <ContactUs />,
-  },
-  {
-    path: "/sellyourcar",
-    element: <SellYourCar />,
   },
   {
     path: "*",
