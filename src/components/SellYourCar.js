@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import NavBar from "./NavBar";
 
-function SellYourCar({ addNewCar}) {
+function SellYourCar() {
     const [carData, setCarData] = useState({
         name: "",
         make: "",
@@ -33,7 +33,7 @@ function SellYourCar({ addNewCar}) {
           });
           if (response.ok) {
             const newCar = await response.json(); 
-            addNewCar(newCar); 
+            // addNewCar(newCar); 
             setCarData({
                 name: "",
                 make: "",
